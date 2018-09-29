@@ -1,0 +1,40 @@
+{% load staticfiles %}
+{% if user.is_authenticated %}
+    <div class="flex-center">
+        <div class="container">
+            <div>
+                <h1 class="logo"><a href="{% url 'index' %}">LearningSmart</a></h1>
+                <p>你已登录
+                    <button class="btn btn-default"><a href="{% url 'logout' %}">退出</a></button>
+                </p>
+            </div>
+        </div>
+    </div>
+{% else %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LearningSmart</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="flex-center">
+        <div class="container">
+            <div>
+                <h1 class="logo"><a href="{% url 'index' %}">LearningSmart</a></h1>
+                <p>你还没有登录，请
+                    <button class="btn btn-default"><a href="{% url 'login' %}">登录</a></button>
+                    或者
+                    <button class="btn btn-default"><a href="{% url 'users:register' %}">注册</a>
+                    </button>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+{% endif %}
