@@ -103,4 +103,6 @@ npm run build
 # Open Browser eg: http://192.168.88.1:8088
 # Bingo, we get an running demo project!
 ```
+![image](https://github.com/wuyueCreator/vue-webpack-django/blob/master/home_20180930031403.png?raw=true)
+
 > If you encounter any problems, please make issue to this project, if you like this demo, please fork it.
