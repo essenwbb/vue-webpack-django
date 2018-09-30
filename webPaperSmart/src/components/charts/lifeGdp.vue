@@ -7,7 +7,7 @@ import echarts from 'echarts'
 import tdTheme from './theme.json'
 echarts.registerTheme('tdTheme', tdTheme)
 export default {
-  name: 'lifeGdp',
+  name: 'LifeGdp',
   mounted () {
     this.$nextTick(() => {
       this.$http.get('/data/get_life_gdp_data').then(function (response) {
